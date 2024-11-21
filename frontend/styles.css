@@ -1,0 +1,179 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #1e1e1e;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: bold;
+}
+
+.mainText {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+}
+
+.mainContent {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.locationList {
+  width: 35vw;
+  height: 90vh;
+  max-width: 20em;
+  color: #fff;
+  margin-right: 2vw;
+  background-color: #ffffff1a;
+  overflow-y: auto;
+}
+
+.locationList::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.locationList::-webkit-scrollbar-thumb {
+  border-radius: 12px; /* Abgerundete Ecken */
+  background-color: #211f1fd5; /* Farbe des Scrollbalkens */
+}
+
+.locationList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.add-location-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 4rem;
+}
+
+#map {
+  height: 90vh;
+  width: 65vw;
+  box-sizing: border-box;
+}
+
+.locationList {
+  position: relative;
+  padding-top: 0px;
+}
+
+.locations {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.plus-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2rem; /* Größe des Pluszeichens */
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.location-item {
+  list-style-type: none;
+  border-top: 0.1rem solid #ddd;
+  border-bottom: 0.1rem solid #ddd;
+  padding: 0.5rem;
+  height: 4rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.popup {
+  display: none; /* Versteckt das Popup standardmäßig */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Kann angepasst werden */
+  max-width: 500px; /* Maximalbreite des Popups */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dots-icon {
+  align-self: flex-start;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.options-popup {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 100px;
+  position: absolute;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-option {
+  cursor: pointer;
+  padding: 0.3rem 0;
+  text-align: center;
+}
+
+.popup-option:hover {
+  background-color: #f0f0f0;
+}

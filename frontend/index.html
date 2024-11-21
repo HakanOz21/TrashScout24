@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- Load Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Load Leaflet Draw -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+
+  <body>
+    <div class="logo">TrashScout24</div>
+    <div class="centered-container">
+      <h3 class="mainText">Help your city to stay clean!</h3>
+    </div>
+    <div class="mainContent">
+      <div class="locationList" id="locationList">
+        <div class="add-location-container">
+          <div class="plus-icon" onclick="addLocation()">+</div>
+        </div>
+        <ul id="locations" class="locations"></ul>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script src="app.js"></script>
+    <div id="locationPopup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Neuen Standort hinzufügen</h2>
+        <form id="addLocationForm">
+          <label for="street">Straße:</label>
+          <input type="text" id="street" required />
+          <label for="address">Adresse:</label>
+          <input type="text" id="address" required />
+          <label for="city">Stadt:</label>
+          <input type="text" id="city" required />
+          <label for="description">Beschreibung:</label>
+          <textarea id="description" required></textarea>
+          <label for="coordinates">Koordinaten:</label>
+          <input type="text" id="coordinates" value="[x, y]" required />
+          <button type="submit">Standort hinzufügen</button>
+        </form>
+      </div>
+    </div>
+    <div id="updatePopup" class="popup" style="display: none">
+      <div class="popup-content">
+        <span class="close" onclick="closeUpdatePopup()">&times;</span>
+        <h2>Standort aktualisieren</h2>
+        <form id="updateLocationForm">
+          <!-- Ensure this is correct -->
+          <label for="updateStreet">Street:</label>
+          <input type="text" id="updateStreet" name="street" required />
+          <label for="updateAddress">Address:</label>
+          <input type="text" id="updateAddress" name="address" required />
+          <label for="updateCity">City:</label>
+          <input type="text" id="updateCity" name="city" required />
+          <label for="updateDescription">Description:</label>
+          <input type="text" id="updateDescription" name="description" />
+          <label for="updateCoordinates">Coordinates:</label>
+          <input
+            type="text"
+            id="updateCoordinates"
+            name="coordinates"
+            required
+          />
+          <button type="submit">Update</button>
+          <!-- Submit button -->
+          <button type="button" onclick="closeUpdatePopup()">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
