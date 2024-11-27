@@ -14,6 +14,8 @@ const fetchLocations = async () => {
 
     const locations = await response.json();
 
+    removeAllMarkers();
+
     displayLocations(locations);
   } catch (error) {
     console.error("Es gab ein Problem mit der Fetch-Operation:", error);
@@ -56,12 +58,13 @@ window.onload = fetchLocations;
 
 function addLocation() {
   const popup = document.getElementById("locationPopup");
-  popup.style.display = "block";
+  popup.classList.add("visible");
 }
 
 function closePopup() {
   const popup = document.getElementById("locationPopup");
-  popup.style.display = "none";
+  popup.classList.remove("visible");
+  document.getElementById("addLocationForm").reset();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,6 +153,13 @@ const toggleOptionsPopup = (event, location) => {
   document.addEventListener("click", () => popup.remove(), { once: true });
 };
 
+const removeAllMarkers = () => {
+  markerMap.forEach((marker) => {
+    marker.remove(); // Marker von der Karte entfernen
+  });
+  markerMap.clear(); // markerMap leeren
+};
+
 const handleDelete = async (location) => {
   console.log("Deleting location:", location._id);
   try {
@@ -167,7 +177,12 @@ const handleDelete = async (location) => {
         markerMap.delete(location._id); // Remove from the markerMap
       }
 
-      fetchLocations(); // Refresh the location list
+      const locationItem = document.querySelector(`#location-${location._id}`);
+      if (locationItem) locationItem.remove(); // Remove from the list
+
+      map.invalidateSize();
+
+      fetchLocations();
     } else {
       console.error("Error deleting location:", response.statusText);
       alert("Error deleting location");

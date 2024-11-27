@@ -38,7 +38,7 @@
     <div id="locationPopup" class="popup">
       <div class="popup-content">
         <span class="close" onclick="closePopup()">&times;</span>
-        <h2>Neuen Standort hinzufügen</h2>
+        <h2 class="headerAddLocationPopUp">Neuen Standort hinzufügen</h2>
         <form id="addLocationForm">
           <label for="street">Straße:</label>
           <input type="text" id="street" required />
@@ -54,12 +54,12 @@
         </form>
       </div>
     </div>
-    <div id="updatePopup" class="popup" style="display: none">
+
+    <div id="updatePopup" style="display: none">
       <div class="popup-content">
         <span class="close" onclick="closeUpdatePopup()">&times;</span>
-        <h2>Standort aktualisieren</h2>
+        <h2 class="headerUpdateLocationPopUp">Standort aktualisieren</h2>
         <form id="updateLocationForm">
-          <!-- Ensure this is correct -->
           <label for="updateStreet">Street:</label>
           <input type="text" id="updateStreet" name="street" required />
           <label for="updateAddress">Address:</label>
@@ -76,9 +76,12 @@
             required
           />
           <button type="submit">Update</button>
-          <!-- Submit button -->
           <button type="button" onclick="closeUpdatePopup()">Cancel</button>
         </form>
+      </div>
+      <div id="optionsPopup" class="popup" style="display: none">
+        <div class="popup-option" onclick="handleDelete()">Delete</div>
+        <div class="popup-option" onclick="openUpdatePopup()">Update</div>
       </div>
     </div>
   </body>
