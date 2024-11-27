@@ -36,5 +36,7 @@ The project was built using the following technology stack:
 ![Map Overview](https://github.com/user-attachments/assets/27d8c2bc-9331-4863-9549-4e9b8355fee7)  
 *An overview of the interactive map with markers for locations.*
 
-![Data Input Form](https://github.com/user-attachments/assets/fdad44c8-a3c2-4b00-9ac0-ee18e2c52970)  
+![Data Input Form](https://github.com/user-attachments/assets/fdad44c8-a3c2-4b00-9ac0-ee18e2c52970)
 *A simple form for adding new locations to the database.*
+
+![image](https://github.com/user-attachments/assets/33ed14a0-cdcf-40ec-8aff-9fda869bb7c2)
