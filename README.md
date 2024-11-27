@@ -1,38 +1,40 @@
 # TrashScout24 🌍  
-_Kartenbasierte Standortverwaltung für nachhaltige Infrastruktur_
+_Map-based location management for sustainable infrastructure_
 
 ---
 
-## 📖 Über das Projekt
+## 📖 About the Project
 
-**TrashScout24** ist eine Webapplikation zur Visualisierung und Verwaltung umweltfreundlicher sowie fehlender nachhaltiger Infrastruktur.  
-Mit einer interaktiven Karte ermöglicht die Anwendung das einfache Erfassen und Anzeigen relevanter Standorte, um Gemeinden und Organisationen bei der nachhaltigen Entwicklung zu unterstützen.
+**TrashScout24** is a web application designed to visualize and manage environmentally friendly and missing sustainable infrastructure.  
+Using an interactive map, the application allows users to easily record and display relevant locations, supporting communities and organizations in planning sustainable development.
 
-Dieses Projekt wurde während meines Studiums realisiert, um moderne Webentwicklungstechnologien anzuwenden und meine Fähigkeiten in Full-Stack-Entwicklung, Datenbanken und datengetriebener Visualisierung zu erweitern.
+This project was developed as part of my university studies to apply modern web development technologies and enhance my skills in full-stack development.
 
 ---
 
-## 🛠️ Verwendete Technologien
+## 🛠️ Technologies Used
 
-Das Projekt wurde mit folgendem Technologie-Stack umgesetzt:
+The project was built using the following technology stack:
 
 - **Frontend:** JavaScript, HTML, CSS  
 - **Backend:** Node.js, Express.js  
-- **Datenbank:** MongoDB  
-- **Bibliotheken:** [Leaflet.js](https://leafletjs.com/) für interaktive Karten
+- **Database:** MongoDB  
+- **Libraries:** [Leaflet.js](https://leafletjs.com/) for interactive maps
 
 ---
 
 ## 🚀 Features
 
-- **Interaktive Karte:** Darstellung von Standorten mithilfe der Leaflet.js-Bibliothek.
-- **Dynamische Datenbankintegration:** Speicherung und Abruf von Standortdaten über MongoDB.
+- **Interactive Map:** Display locations using the Leaflet.js library.
+- **Dynamic Database Integration:** Store and retrieve location data via MongoDB.
+- **User Management:** Securely create and manage user accounts linked to locations.
 
 ---
 
 ## 🖼️ Screenshots
-![image](https://github.com/user-attachments/assets/27d8c2bc-9331-4863-9549-4e9b8355fee7)
-![image](https://github.com/user-attachments/assets/fdad44c8-a3c2-4b00-9ac0-ee18e2c52970)
----
 
+![Map Overview](https://github.com/user-attachments/assets/27d8c2bc-9331-4863-9549-4e9b8355fee7)  
+*An overview of the interactive map with markers for locations.*
 
+![Data Input Form](https://github.com/user-attachments/assets/fdad44c8-a3c2-4b00-9ac0-ee18e2c52970)  
+*A simple form for adding new locations to the database.*
